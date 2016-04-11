@@ -1,0 +1,18 @@
+Package: ptldata
+Type: Package
+Title: A set of data dedicated to the ptlmapper R package
+Description: The ptldata package provides a set of data dedicated to the ptlmapper R package. It embeds simulated single cell values (phenotypes), for differents individuals (genotype) and for different level of error.
+Version: 0.0.0.9000
+Date: 2016-01-26
+Authors@R: c(
+    person("Florent", "Chuffart", , "florent.chuffart@gmail.com", c("aut", "cre", "cph")),
+    person("Daniel", "Jost", ,"daniel.jost@imag.fr", "aut"),
+    person("Gael", "Yvert", ,"gael.yvert@ens-lyon.fr", "aut")
+    )
+Maintainer: Florent Chuffart <florent.chuffart@gmail.com>
+License: CeCILL
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Depends: R(>= 2.10.0)
+
+
