@@ -24,4 +24,9 @@ devtools::install_github("fchuffar/ptldata")
 
 ## Usage
 
-Please refers to the vignette of the R package `ptlmapper`
+To learn more about how to use available data, refers to the R package `ptlmapper` vignette: 
+
+```R
+devtools::install_github("fchuffar/ptlmapper")
+browseVignettes("ptlmapper")
+```

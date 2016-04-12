@@ -4,7 +4,7 @@
 \name{cells}
 \alias{cells}
 \title{Simulated single cell values (phenotypes).}
-\format{A list with 1490 item, each item is a vector of 20000 integer}
+\format{A list with 1490 items, each item is a vector of 20000 integer}
 \source{
 \url{http://membres-timc.imag.fr/Daniel.Jost/}
 }
