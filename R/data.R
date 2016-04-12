@@ -2,7 +2,7 @@
 #'
 #' A list of the 20000 single cell values (phenotype) of the 1490 individuals described by the variable 'indiv'.
 #'
-#' @format A list with 1490 item, each item is a vector of 20000 integer
+#' @format A list with 1490 items, each item is a vector of 20000 integer
 #' @source \url{http://membres-timc.imag.fr/Daniel.Jost/}
 "cells"
 
