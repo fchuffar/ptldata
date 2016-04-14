@@ -8,7 +8,7 @@
 
 #' Genotype of the simulated individuals.
 #'
-#' A matrix whose rows are markers and columns are individuals. The marker 101 corresponds to the 'all' variable of the 'indiv' data frame, it is the parental allele linked with the phenotype. From this marker 101, genotype is propagated (upstream and downstream) with recombination factor of 5%. 
+#' A data frame whose rows are markers and columns are individuals. The marker 101 corresponds to the 'all' variable of the 'indiv' data frame, it is the parental allele linked with the phenotype. From this marker 101, genotype is propagated (upstream and downstream) with recombination factor of 5%. 
 #'
 #' @format A matrix with 210 rows and 1490 columns
 #' @source \url{http://membres-timc.imag.fr/Daniel.Jost/}

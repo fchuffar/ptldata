@@ -10,8 +10,10 @@
 #' genodata = generate_genodata(alleles, half_chr_width=50)
 #' print(genodata)
 #' tetas = compute_teta(genodata)
-#' # matlab::imagesc(t(as.matrix(genodata)), xlab="markers", ylab="segrgants", main="Parental origin of segregant genomes")
-#' plot(density(tetas), main=paste("Recombination Fraction Distribution"), xlab=paste("mean(teta)=", signif(mean(tetas),3), sep=""))
+#' # matlab::imagesc(t(as.matrix(genodata)), xlab="markers", 
+#' #   ylab="segrgants", main="Parental origin of segregant genomes")
+#' plot(density(tetas), main=paste("Recombination Fraction Distribution"), 
+#'   xlab=paste("mean(teta)=", signif(mean(tetas),3), sep=""))
 #' abline(v=mean(tetas), lty=2)
 #' @export
 generate_genodata = function(alleles, half_chr_width = 100, teta=0.05) {
@@ -44,5 +46,34 @@ compute_teta = function(genodata) {
   genome_matrix = t(as.matrix(genodata))
   tetas = apply(genome_matrix[,-1] != genome_matrix[,-ncol(genome_matrix)], 2, sum) / nrow(genome_matrix)
   return(tetas)  
+}
+
+
+#' A Function Used to Export Data.
+#'
+#' This function was used to export data.
+export_data = function() {
+  simdata_geno_pheno_filename = paste("~/Desktop/LBMC/projects/scptl/results/20150703/cache/simdata_geno_pheno.RData")
+  load(simdata_geno_pheno_filename)
+
+  # indiv
+  head(indiv)
+  indiv = indiv[,1:8]
+  head(indiv)
+  rownames(indiv) = colnames(genodata)
+  head(indiv)
+
+  # cells
+  names(cells) = colnames(genodata)
+
+  # genodata
+  rownames(genodata) = paste("marker", 1:nrow(genodata), sep="_")
+  
+  
+  save(cells, file="/Users/florent/projects/ptldata/data/cells.RData", compress="xz")
+  save(genodata, file="/Users/florent/projects/ptldata/data/genodata.RData", compress="bzip2")
+  save(indiv, file="/Users/florent/projects/ptldata/data/indiv.RData", compress="xz")
+
+  # devtools::document(); devtools::install(); devtools::check()
 }
 

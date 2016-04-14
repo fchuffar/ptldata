@@ -12,7 +12,7 @@
 genodata
 }
 \description{
-A matrix whose rows are markers and columns are individuals. The marker 101 corresponds to the 'all' variable of the 'indiv' data frame, it is the parental allele linked with the phenotype. From this marker 101, genotype is propagated (upstream and downstream) with recombination factor of 5%.
+A data frame whose rows are markers and columns are individuals. The marker 101 corresponds to the 'all' variable of the 'indiv' data frame, it is the parental allele linked with the phenotype. From this marker 101, genotype is propagated (upstream and downstream) with recombination factor of 5%.
 }
 \keyword{datasets}
 

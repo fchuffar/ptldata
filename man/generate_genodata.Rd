@@ -22,8 +22,10 @@ print(alleles)
 genodata = generate_genodata(alleles, half_chr_width=50)
 print(genodata)
 tetas = compute_teta(genodata)
-# matlab::imagesc(t(as.matrix(genodata)), xlab="markers", ylab="segrgants", main="Parental origin of segregant genomes")
-plot(density(tetas), main=paste("Recombination Fraction Distribution"), xlab=paste("mean(teta)=", signif(mean(tetas),3), sep=""))
+# matlab::imagesc(t(as.matrix(genodata)), xlab="markers", 
+#   ylab="segrgants", main="Parental origin of segregant genomes")
+plot(density(tetas), main=paste("Recombination Fraction Distribution"), 
+  xlab=paste("mean(teta)=", signif(mean(tetas),3), sep=""))
 abline(v=mean(tetas), lty=2)
 }
 
