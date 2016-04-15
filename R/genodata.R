@@ -34,6 +34,7 @@ generate_genodata = function(alleles, half_chr_width = 100, teta=0.05) {
   genome_matrix = g
   genodata = data.frame(t(genome_matrix))
   names(genodata) = paste("seg", 1:nb_indiv, sep="_")
+  genodata + genodata + 1
   return(genodata)
 }
 
@@ -59,6 +60,7 @@ export_data = function() {
   # indiv
   head(indiv)
   indiv = indiv[,1:8]
+  indiv$all = as.numeric(as.factor(indiv$all))
   head(indiv)
   rownames(indiv) = colnames(genodata)
   head(indiv)
@@ -68,7 +70,10 @@ export_data = function() {
 
   # genodata
   rownames(genodata) = paste("marker", 1:nrow(genodata), sep="_")
-  
+  genodata = genodata + 1
+
+  # check
+  sum(indiv$all!=genodata[101,] )
   
   save(cells, file="/Users/florent/projects/ptldata/data/cells.RData", compress="xz")
   save(genodata, file="/Users/florent/projects/ptldata/data/genodata.RData", compress="bzip2")
@@ -76,4 +81,3 @@ export_data = function() {
 
   # devtools::document(); devtools::install(); devtools::check()
 }
-
