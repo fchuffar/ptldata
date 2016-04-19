@@ -5,9 +5,10 @@ Description: The ptldata package provides a set of data dedicated to the ptlmapp
 Version: 0.0.0.9000
 Date: 2016-01-26
 Authors@R: c(
-    person("Florent", "Chuffart", , "florent.chuffart@gmail.com", c("aut", "cre", "cph")),
+    person("Florent", "Chuffart", , "florent.chuffart@gmail.com", c("aut", "cre")),
     person("Daniel", "Jost", ,"daniel.jost@imag.fr", "aut"),
-    person("Gael", "Yvert", ,"gael.yvert@ens-lyon.fr", "aut")
+    person("Gael", "Yvert", ,"gael.yvert@ens-lyon.fr", "aut"),
+    person("CNRS", , , , "cph")
     )
 Maintainer: Florent Chuffart <florent.chuffart@gmail.com>
 License: CeCILL
