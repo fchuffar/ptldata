@@ -54,8 +54,8 @@ compute_teta = function(genodata) {
 #'
 #' This function was used to export data.
 export_data = function() {
-  simdata_geno_pheno_filename = paste("~/Desktop/LBMC/projects/scptl/results/20150703/cache/simdata_geno_pheno.RData")
-  load(simdata_geno_pheno_filename)
+  # simdata_geno_pheno_filename = paste("~/Desktop/LBMC/projects/scptl/results/20150703/cache/simdata_geno_pheno.RData")
+  # load(simdata_geno_pheno_filename)
 
   # indiv
   head(indiv)
@@ -75,9 +75,9 @@ export_data = function() {
   # check
   sum(indiv$all!=genodata[101,] )
   
-  save(cells, file="/Users/florent/projects/ptldata/data/cells.RData", compress="xz")
-  save(genodata, file="/Users/florent/projects/ptldata/data/genodata.RData", compress="bzip2")
-  save(indiv, file="/Users/florent/projects/ptldata/data/indiv.RData", compress="xz")
+  # save(cells, file="/Users/florent/projects/ptldata/data/cells.RData", compress="xz")
+  # save(genodata, file="/Users/florent/projects/ptldata/data/genodata.RData", compress="bzip2")
+  # save(indiv, file="/Users/florent/projects/ptldata/data/indiv.RData", compress="xz")
 
   # devtools::document(); devtools::install(); devtools::check()
 }
