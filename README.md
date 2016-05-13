@@ -24,12 +24,10 @@ devtools::install_github("fchuffar/ptldata")
 
 ## Usage
 
-To learn more about how to use this data, please refer to the R package `ptlmapper` vignette: 
+To learn on how to use this method, please go to the vignette of the package: 
 
-```R
-devtools::install_github("fchuffar/ptlmapper")
-browseVignettes("ptlmapper")
-```
+http://graal.ens-lyon.fr/~fchuffart/ptlmapper/inst/doc/simdata.html
+
 
 ## Reference
 
